@@ -1,0 +1,14 @@
+Lab:02
+
+1. docker-compose exec tools bash
+
+#creating topic
+
+>kafka-topics --bootstrap-server kafka-1:9092 --create --partitions 1 --replication-factor 1 --topic testing
+
+
+> kafka-console-producer --broker-list kafka-1:9092 --topic testing ( to produce ) 
+> kafka-console-consumer --bootstrap-server kafka-1:9092 --from-beginning --topic testing ( to consume )
+
+> kafka-console-producer --broker-list kafka-1:9092 --topic testing --property parse.key=true --property key.separator=, ( to produce with key )
+> kafka-console-consumer --bootstrap-server kafka-1:9092 --from-beginning --topic testing --property print.key=true ( to consume with key )
