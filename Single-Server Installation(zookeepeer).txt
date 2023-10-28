@@ -11,3 +11,19 @@ dataDir=/var/lib/zookeeper
 clientPort=2181
 7. export JAVA_HOME=/usr/java/jdk21.0.1
 8. sudo  /usr/local/zookeeper/bin/zkServer.sh start
+
+to check the status of zookeeper in standalone mode - 
+
+# echo srvr | nc localhost 2181
+
+Zookeeper version: 3.8.3-6ad6d364c7c0bcf0de452d54ebefa3058098ab56, built on 2023-10-05 10:34 UTC
+Latency min/avg/max: 0/0.0/0
+Received: 1
+Sent: 0
+Connections: 1
+Outstanding: 0
+Zxid: 0x0
+Mode: standalone
+Node count: 5
+
+The above output will be the status of your zookeeper running in standalone mode. 
